@@ -13,6 +13,17 @@ const categories = [
   { id: 'vegetarian', label: 'Vegetarian', icon: Leaf }
 ]
 
+// Reliable fallback images for menu items
+const getFallbackImage = (category: string) => {
+  const fallbacks = {
+    mains: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    appetizers: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    desserts: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    vegetarian: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+  }
+  return fallbacks[category as keyof typeof fallbacks] || fallbacks.mains
+}
+
 const menuItems = [
   {
     id: 1,
@@ -28,7 +39,7 @@ const menuItems = [
     title: "Artisanal Cheese & Charcuterie",
     description: "Selection of premium cheeses, cured meats, and artisanal accompaniments",
     category: "appetizers",
-    image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1564671165093-20688ff1fffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: [],
     price: "$18"
   },
@@ -179,7 +190,7 @@ export default function MenuGallery() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     quality={85}
-                    fallbackSrc="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    fallbackSrc={getFallbackImage(item.category)}
                   />
                   
                   {/* Price Badge */}

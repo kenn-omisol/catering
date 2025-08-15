@@ -118,6 +118,7 @@ export default function OptimizedImage({
   }
 
   const handleError = () => {
+    console.warn('Image failed to load:', currentSrc)
     setImageError(true)
     setIsLoading(false)
     onError?.()
