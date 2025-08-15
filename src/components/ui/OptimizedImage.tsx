@@ -21,8 +21,32 @@ interface OptimizedImageProps {
   onError?: () => void
 }
 
+// Get the base path for GitHub Pages
+const getBasePath = () => {
+  if (typeof window !== 'undefined') {
+    return window.location.pathname.includes('/catering') ? '/catering' : ''
+  }
+  return process.env.NODE_ENV === 'production' ? '/catering' : ''
+}
+
+// Fix image src for GitHub Pages
+const fixImageSrc = (src: string) => {
+  // If it's already an external URL, return as-is
+  if (src.startsWith('http')) return src
+  
+  // If it's a local path, ensure it has the correct base path
+  if (src.startsWith('/')) {
+    const basePath = getBasePath()
+    return basePath + src
+  }
+  
+  return src
+}
+
 // Generate a simple blur placeholder
 const generateBlurDataURL = (width: number = 10, height: number = 10) => {
+  if (typeof window === 'undefined') return ''
+  
   const canvas = document.createElement('canvas')
   canvas.width = width
   canvas.height = height
@@ -64,8 +88,12 @@ export default function OptimizedImage({
   const [isInView, setIsInView] = useState(priority)
   const imgRef = useRef<HTMLDivElement>(null)
 
+  // Fix image sources for GitHub Pages
+  const fixedSrc = fixImageSrc(src)
+  const fixedFallbackSrc = fallbackSrc ? fixImageSrc(fallbackSrc) : undefined
+
   // Generate blur placeholder if not provided
-  const defaultBlurDataURL = blurDataURL || (typeof window !== 'undefined' ? generateBlurDataURL() : undefined)
+  const defaultBlurDataURL = blurDataURL || generateBlurDataURL()
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -109,7 +137,7 @@ export default function OptimizedImage({
     onError?.()
   }
 
-  const currentSrc = imageError && fallbackSrc ? fallbackSrc : src
+  const currentSrc = imageError && fixedFallbackSrc ? fixedFallbackSrc : fixedSrc
 
   return (
     <div

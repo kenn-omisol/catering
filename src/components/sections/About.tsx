@@ -100,7 +100,7 @@ export default function About() {
             {/* Large Image */}
             <div className="col-span-2 relative h-64 rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="/images/kitchen-modern.svg"
                 alt="Professional kitchen with chefs preparing gourmet dishes"
                 fill
                 className="object-cover"
@@ -113,7 +113,7 @@ export default function About() {
             {/* Small Images */}
             <div className="relative h-32 rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="https://images.unsplash.com/photo-1577308856632-8ad1b9e14b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                src="/images/food-gallery-1.svg"
                 alt="Chef plating an elegant dish"
                 fill
                 className="object-cover"
@@ -125,7 +125,7 @@ export default function About() {
             
             <div className="relative h-32 rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="https://images.unsplash.com/photo-1556909114-30b17ac0e991?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                src="/placeholder-event.svg"
                 alt="Elegant event setup with beautiful table arrangements"
                 fill
                 className="object-cover"
@@ -223,7 +223,7 @@ export default function About() {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
                   <OptimizedImage
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    src="/images/chef-portrait.svg"
                     alt="Executive Chef Portrait"
                     width={128}
                     height={128}

@@ -13,7 +13,7 @@ const testimonials = [
     date: "October 2024",
     rating: 5,
     text: "Absolutely phenomenal! The food was beyond our expectations and the presentation was stunning. Our guests are still talking about the incredible flavors and beautiful setup. The team went above and beyond to make our special day perfect.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    image: "/images/testimonial-couple.svg",
     eventSize: "150 guests"
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     date: "September 2024",
     rating: 5,
     text: "We've used many catering services for our corporate events, but this team stands out. Professional, punctual, and the food quality is consistently excellent. They handled our dietary restrictions with ease and creativity.",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b02c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    image: "/placeholder-person.svg",
     eventSize: "75 guests"
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     date: "August 2024",
     rating: 5,
     text: "From the initial consultation to the final cleanup, everything was handled with such care and attention to detail. The custom menu they created perfectly reflected my father's favorite flavors. It was truly a celebration to remember.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    image: "/placeholder-person.svg",
     eventSize: "40 guests"
   },
   {
@@ -43,7 +43,7 @@ const testimonials = [
     date: "July 2024",
     rating: 5,
     text: "Twenty-five years of marriage deserved something special, and they delivered beyond our wildest dreams. The intimate setting, exquisite cuisine, and flawless service made our anniversary unforgettable. Highly recommend!",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    image: "/images/testimonial-couple.svg",
     eventSize: "30 guests"
   },
   {
@@ -53,7 +53,7 @@ const testimonials = [
     date: "June 2024",
     rating: 5,
     text: "Outstanding service for our three-day retreat. They adapted to our changing schedule, accommodated various dietary needs, and kept our team well-fed and energized. The breakfast spreads were particularly impressive!",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    image: "/images/testimonial-couple.svg",
     eventSize: "120 guests"
   }
 ]

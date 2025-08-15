@@ -1,0 +1,84 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7C59;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F5233;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Couple -->
+  <g transform="translate(150, 120)">
+    <!-- Woman -->
+    <g transform="translate(0, 0)">
+      <!-- Head -->
+      <circle cx="0" cy="0" r="30" fill="#fdbcb4"/>
+      <!-- Hair -->
+      <ellipse cx="0" cy="-15" rx="35" ry="25" fill="#8b4513"/>
+      <!-- Eyes -->
+      <circle cx="-8" cy="-5" r="2" fill="#2c3e50"/>
+      <circle cx="8" cy="-5" r="2" fill="#2c3e50"/>
+      <!-- Smile -->
+      <path d="M -10 5 Q 0 12 10 5" stroke="#d32f2f" stroke-width="2" fill="none"/>
+      <!-- Dress -->
+      <ellipse cx="0" cy="60" rx="40" ry="50" fill="#e91e63"/>
+      <!-- Arms -->
+      <ellipse cx="-45" cy="45" rx="12" ry="25" fill="#fdbcb4"/>
+      <ellipse cx="45" cy="45" rx="12" ry="25" fill="#fdbcb4"/>
+    </g>
+    
+    <!-- Man -->
+    <g transform="translate(120, 0)">
+      <!-- Head -->
+      <circle cx="0" cy="0" r="32" fill="#f4a792"/>
+      <!-- Hair -->
+      <ellipse cx="0" cy="-20" rx="30" ry="15" fill="#654321"/>
+      <!-- Eyes -->
+      <circle cx="-8" cy="-5" r="2" fill="#2c3e50"/>
+      <circle cx="8" cy="-5" r="2" fill="#2c3e50"/>
+      <!-- Smile -->
+      <path d="M -12 8 Q 0 15 12 8" stroke="#d32f2f" stroke-width="2" fill="none"/>
+      <!-- Suit -->
+      <rect x="-35" y="25" width="70" height="80" fill="#2c3e50" rx="8"/>
+      <!-- Tie -->
+      <rect x="-3" y="25" width="6" height="60" fill="#8e24aa"/>
+      <!-- Arms -->
+      <ellipse cx="-45" cy="50" rx="12" ry="30" fill="#2c3e50"/>
+      <ellipse cx="45" cy="50" rx="12" ry="30" fill="#2c3e50"/>
+      <!-- Hands -->
+      <circle cx="-45" cy="80" r="8" fill="#f4a792"/>
+      <circle cx="45" cy="80" r="8" fill="#f4a792"/>
+    </g>
+  </g>
+  
+  <!-- Wedding/Event Elements -->
+  <g opacity="0.4">
+    <!-- Flowers -->
+    <g transform="translate(50, 300)">
+      <circle cx="0" cy="0" r="8" fill="#ff69b4"/>
+      <circle cx="15" cy="5" r="6" fill="#ffffff"/>
+      <circle cx="30" cy="-3" r="7" fill="#ff1744"/>
+      <circle cx="45" cy="8" r="5" fill="#ffffff"/>
+    </g>
+    
+    <g transform="translate(450, 80)">
+      <circle cx="0" cy="0" r="6" fill="#ff69b4"/>
+      <circle cx="12" cy="3" r="5" fill="#ffffff"/>
+      <circle cx="24" cy="-2" r="6" fill="#ff1744"/>
+    </g>
+    
+    <!-- Hearts -->
+    <g transform="translate(100, 50)">
+      <path d="M 0,5 C -5,0 -15,0 -15,10 C -15,20 0,30 0,30 C 0,30 15,20 15,10 C 15,0 5,0 0,5 Z" fill="#ff1744" opacity="0.6"/>
+    </g>
+    
+    <g transform="translate(480, 250)">
+      <path d="M 0,3 C -3,0 -8,0 -8,5 C -8,10 0,15 0,15 C 0,15 8,10 8,5 C 8,0 3,0 0,3 Z" fill="#ff69b4" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <!-- Elegant frame -->
+  <rect x="20" y="20" width="560" height="360" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3" rx="10"/>
+</svg>

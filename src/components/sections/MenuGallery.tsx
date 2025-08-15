@@ -19,7 +19,7 @@ const menuItems = [
     title: "Grilled Salmon with Herb Butter",
     description: "Fresh Atlantic salmon with seasonal vegetables and lemon herb butter sauce",
     category: "mains",
-    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/images/food-gallery-1.svg",
     dietary: ["gluten-free"],
     price: "$28"
   },
@@ -28,7 +28,7 @@ const menuItems = [
     title: "Artisanal Cheese & Charcuterie",
     description: "Selection of premium cheeses, cured meats, and artisanal accompaniments",
     category: "appetizers",
-    image: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: [],
     price: "$18"
   },
@@ -37,7 +37,7 @@ const menuItems = [
     title: "Chocolate Lava Cake",
     description: "Warm chocolate cake with molten center, vanilla ice cream and berry compote",
     category: "desserts",
-    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: ["vegetarian"],
     price: "$12"
   },
@@ -46,7 +46,7 @@ const menuItems = [
     title: "Mediterranean Vegetable Stack",
     description: "Grilled zucchini, eggplant, and bell peppers with herbed goat cheese",
     category: "vegetarian",
-    image: "https://images.unsplash.com/photo-1572441712651-c44a1e2f1c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: ["vegetarian", "gluten-free"],
     price: "$22"
   },
@@ -55,7 +55,7 @@ const menuItems = [
     title: "Beef Tenderloin Wellington",
     description: "Prime beef tenderloin wrapped in puff pastry with mushroom duxelles",
     category: "mains",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: [],
     price: "$42"
   },
@@ -64,7 +64,7 @@ const menuItems = [
     title: "Stuffed Mushroom Caps",
     description: "Button mushrooms filled with herb breadcrumbs and parmesan cheese",
     category: "appetizers",
-    image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: ["vegetarian"],
     price: "$14"
   },
@@ -73,7 +73,7 @@ const menuItems = [
     title: "Lemon Tart with Meringue",
     description: "Classic French lemon tart with torched meringue and candied lemon zest",
     category: "desserts",
-    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: ["vegetarian"],
     price: "$10"
   },
@@ -82,7 +82,7 @@ const menuItems = [
     title: "Quinoa Power Bowl",
     description: "Superfood quinoa with roasted vegetables, avocado, and tahini dressing",
     category: "vegetarian",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/placeholder-food.svg",
     dietary: ["vegetarian", "vegan", "gluten-free"],
     price: "$19"
   }
