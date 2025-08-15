@@ -1,0 +1,105 @@
+<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7C59;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5A8B69;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3A6C49;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="faceGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#f4a792;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#e09080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d7806e;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#654321;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4a3219;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2f1f11;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Professional background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Soft lighting effect -->
+  <ellipse cx="300" cy="300" rx="250" ry="350" fill="#ffffff" opacity="0.1"/>
+  
+  <!-- Professional man portrait -->
+  <g transform="translate(300, 200)">
+    <!-- Neck -->
+    <ellipse cx="0" cy="85" rx="25" ry="30" fill="url(#faceGrad)"/>
+    
+    <!-- Face (slightly more angular) -->
+    <ellipse cx="0" cy="0" rx="70" ry="80" fill="url(#faceGrad)"/>
+    
+    <!-- Professional short hair -->
+    <ellipse cx="0" cy="-40" rx="70" ry="50" fill="url(#hairGrad)"/>
+    <ellipse cx="-25" cy="-20" rx="20" ry="35" fill="url(#hairGrad)"/>
+    <ellipse cx="25" cy="-20" rx="20" ry="35" fill="url(#hairGrad)"/>
+    
+    <!-- Hair texture -->
+    <ellipse cx="-15" cy="-35" rx="6" ry="12" fill="#4a3219" opacity="0.8"/>
+    <ellipse cx="10" cy="-40" rx="5" ry="10" fill="#4a3219" opacity="0.7"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="-20" cy="-12" rx="9" ry="5" fill="#ffffff"/>
+    <ellipse cx="20" cy="-12" rx="9" ry="5" fill="#ffffff"/>
+    <ellipse cx="-20" cy="-12" rx="6" ry="4" fill="#2d5016"/>
+    <ellipse cx="20" cy="-12" rx="6" ry="4" fill="#2d5016"/>
+    <circle cx="-20" cy="-12" r="2.5" fill="#1a2e0b"/>
+    <circle cx="20" cy="-12" r="2.5" fill="#1a2e0b"/>
+    <circle cx="-19" cy="-13" r="1" fill="#ffffff"/>
+    <circle cx="21" cy="-13" r="1" fill="#ffffff"/>
+    
+    <!-- Eyebrows (slightly thicker) -->
+    <ellipse cx="-20" cy="-22" rx="12" ry="4" fill="#2f1f11"/>
+    <ellipse cx="20" cy="-22" rx="12" ry="4" fill="#2f1f11"/>
+    
+    <!-- Nose -->
+    <ellipse cx="0" cy="-2" rx="5" ry="10" fill="#e09080"/>
+    <ellipse cx="-1" cy="-6" rx="1.5" ry="2" fill="#d7806e" opacity="0.8"/>
+    <ellipse cx="1" cy="-6" rx="1.5" ry="2" fill="#d7806e" opacity="0.8"/>
+    
+    <!-- Lips (thinner, more masculine) -->
+    <ellipse cx="0" cy="18" rx="10" ry="4" fill="#c77a7a"/>
+    <ellipse cx="0" cy="17" rx="8" ry="3" fill="#d88888"/>
+    
+    <!-- Slight stubble/beard shadow -->
+    <ellipse cx="0" cy="35" rx="45" ry="25" fill="#2f1f11" opacity="0.2"/>
+    <ellipse cx="-25" cy="25" rx="15" ry="20" fill="#2f1f11" opacity="0.15"/>
+    <ellipse cx="25" cy="25" rx="15" ry="20" fill="#2f1f11" opacity="0.15"/>
+    
+    <!-- Professional suit -->
+    <ellipse cx="0" cy="125" rx="85" ry="65" fill="#2c3e50"/>
+    <ellipse cx="0" cy="145" rx="75" ry="55" fill="#34495e"/>
+    
+    <!-- Suit lapels -->
+    <path d="M -45 95 Q -25 105 -15 125 Q -20 145 -30 165" fill="#1a252f"/>
+    <path d="M 45 95 Q 25 105 15 125 Q 20 145 30 165" fill="#1a252f"/>
+    
+    <!-- White dress shirt -->
+    <ellipse cx="0" cy="110" rx="30" ry="40" fill="#ffffff"/>
+    <ellipse cx="0" cy="115" rx="25" ry="35" fill="#f8f9fa"/>
+    
+    <!-- Tie -->
+    <ellipse cx="0" cy="125" rx="8" ry="35" fill="#8e24aa"/>
+    <ellipse cx="0" cy="120" rx="6" ry="30" fill="#9c27b0"/>
+    <!-- Tie pattern -->
+    <ellipse cx="-2" cy="115" rx="1" ry="3" fill="#ba68c8" opacity="0.8"/>
+    <ellipse cx="2" cy="125" rx="1" ry="3" fill="#ba68c8" opacity="0.8"/>
+    <ellipse cx="-1" cy="135" rx="1" ry="3" fill="#ba68c8" opacity="0.8"/>
+    
+    <!-- Collar -->
+    <path d="M -25 100 Q -15 105 -8 115" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <path d="M 25 100 Q 15 105 8 115" stroke="#ffffff" stroke-width="2" fill="none"/>
+    
+    <!-- Professional smile lines -->
+    <path d="M -15 25 Q -10 30 -5 25" stroke="#d7806e" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M 15 25 Q 10 30 5 25" stroke="#d7806e" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- Professional lighting from left -->
+  <ellipse cx="180" cy="200" rx="80" ry="180" fill="#ffffff" opacity="0.12"/>
+  
+  <!-- Soft shadow -->
+  <ellipse cx="310" cy="550" rx="130" ry="35" fill="#000000" opacity="0.15"/>
+</svg>

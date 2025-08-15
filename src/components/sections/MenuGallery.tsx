@@ -19,7 +19,7 @@ const menuItems = [
     title: "Grilled Salmon with Herb Butter",
     description: "Fresh Atlantic salmon with seasonal vegetables and lemon herb butter sauce",
     category: "mains",
-    image: "/images/food-gallery-1.svg",
+    image: "/images/salmon-dish.svg",
     dietary: ["gluten-free"],
     price: "$28"
   },
@@ -37,7 +37,7 @@ const menuItems = [
     title: "Chocolate Lava Cake",
     description: "Warm chocolate cake with molten center, vanilla ice cream and berry compote",
     category: "desserts",
-    image: "/placeholder-food.svg",
+    image: "/images/chocolate-dessert.svg",
     dietary: ["vegetarian"],
     price: "$12"
   },
@@ -55,7 +55,7 @@ const menuItems = [
     title: "Beef Tenderloin Wellington",
     description: "Prime beef tenderloin wrapped in puff pastry with mushroom duxelles",
     category: "mains",
-    image: "/placeholder-food.svg",
+    image: "/images/beef-wellington.svg",
     dietary: [],
     price: "$42"
   },

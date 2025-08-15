@@ -23,7 +23,7 @@ const testimonials = [
     date: "September 2024",
     rating: 5,
     text: "We've used many catering services for our corporate events, but this team stands out. Professional, punctual, and the food quality is consistently excellent. They handled our dietary restrictions with ease and creativity.",
-    image: "/placeholder-person.svg",
+    image: "/images/professional-woman.svg",
     eventSize: "75 guests"
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     date: "August 2024",
     rating: 5,
     text: "From the initial consultation to the final cleanup, everything was handled with such care and attention to detail. The custom menu they created perfectly reflected my father's favorite flavors. It was truly a celebration to remember.",
-    image: "/placeholder-person.svg",
+    image: "/images/professional-man.svg",
     eventSize: "40 guests"
   },
   {
@@ -53,7 +53,7 @@ const testimonials = [
     date: "June 2024",
     rating: 5,
     text: "Outstanding service for our three-day retreat. They adapted to our changing schedule, accommodated various dietary needs, and kept our team well-fed and energized. The breakfast spreads were particularly impressive!",
-    image: "/images/testimonial-couple.svg",
+    image: "/images/professional-man.svg",
     eventSize: "120 guests"
   }
 ]
