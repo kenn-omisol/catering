@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "npm run build && netlify deploy --prod --dir=out",
+    "deploy:github": "npm run build && gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
