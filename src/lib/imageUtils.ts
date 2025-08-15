@@ -111,3 +111,4 @@ export const getOptimalQuality = (imageType: 'hero' | 'portrait' | 'gallery' | '
       return 80
   }
 }
+

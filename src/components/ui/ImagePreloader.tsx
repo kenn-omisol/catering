@@ -24,12 +24,15 @@ export default function ImagePreloader({ images, priority = false }: ImagePreloa
   const preloadImages = (imageSrcs: string[]) => {
     imageSrcs.forEach((src) => {
       if (typeof window !== 'undefined') {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.as = 'image'
-        link.href = src
-        link.crossOrigin = 'anonymous'
-        document.head.appendChild(link)
+        // Use Image constructor for better compatibility and less DOM manipulation
+        const img = new Image()
+        img.loading = 'eager'
+        img.decoding = 'async'
+        // Only set crossOrigin for external URLs
+        if (src.startsWith('http') && !src.includes(window.location.hostname)) {
+          img.crossOrigin = 'anonymous'
+        }
+        img.src = src
       }
     })
   }
@@ -58,3 +61,4 @@ export const useImagePreloader = () => {
 
   return { preloadImage, preloadImages }
 }
+

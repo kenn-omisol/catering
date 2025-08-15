@@ -43,27 +43,12 @@ const fixImageSrc = (src: string) => {
   return src
 }
 
+// Static blur data URL for better SSR compatibility
+const DEFAULT_BLUR_DATA_URL = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjNmNGY2O3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6I2U1ZTdlYjtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZDFkNWRiO3N0b3Atb3BhY2l0eToxIiAvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgZmlsbD0idXJsKCNncmFkaWVudCkiLz4KPC9zdmc+'
+
 // Generate a simple blur placeholder
-const generateBlurDataURL = (width: number = 10, height: number = 10) => {
-  if (typeof window === 'undefined') return ''
-  
-  const canvas = document.createElement('canvas')
-  canvas.width = width
-  canvas.height = height
-  const ctx = canvas.getContext('2d')
-  
-  if (ctx) {
-    // Create a subtle gradient blur
-    const gradient = ctx.createLinearGradient(0, 0, width, height)
-    gradient.addColorStop(0, '#f3f4f6')
-    gradient.addColorStop(0.5, '#e5e7eb')
-    gradient.addColorStop(1, '#d1d5db')
-    
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, width, height)
-  }
-  
-  return canvas.toDataURL()
+const generateBlurDataURL = (): string => {
+  return DEFAULT_BLUR_DATA_URL
 }
 
 export default function OptimizedImage({
@@ -76,7 +61,7 @@ export default function OptimizedImage({
   sizes,
   priority = false,
   quality = 85,
-  placeholder = 'blur',
+  placeholder = 'empty',
   blurDataURL,
   fallbackSrc,
   onLoad,
@@ -92,8 +77,9 @@ export default function OptimizedImage({
   const fixedSrc = fixImageSrc(src)
   const fixedFallbackSrc = fallbackSrc ? fixImageSrc(fallbackSrc) : undefined
 
-  // Generate blur placeholder if not provided
-  const defaultBlurDataURL = blurDataURL || generateBlurDataURL()
+  // Generate blur placeholder if not provided and placeholder is blur
+  const shouldUseBlur = placeholder === 'blur'
+  const defaultBlurDataURL = shouldUseBlur ? (blurDataURL || generateBlurDataURL()) : undefined
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -167,7 +153,7 @@ export default function OptimizedImage({
           priority={priority}
           quality={quality}
           placeholder={placeholder}
-          blurDataURL={defaultBlurDataURL}
+          {...(shouldUseBlur && defaultBlurDataURL ? { blurDataURL: defaultBlurDataURL } : {})}
           className={cn(
             'transition-opacity duration-500',
             isLoading ? 'opacity-0' : 'opacity-100',

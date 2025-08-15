@@ -19,7 +19,7 @@ const menuItems = [
     title: "Grilled Salmon with Herb Butter",
     description: "Fresh Atlantic salmon with seasonal vegetables and lemon herb butter sauce",
     category: "mains",
-    image: "/images/salmon-dish.svg",
+    image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: ["gluten-free"],
     price: "$28"
   },
@@ -28,7 +28,7 @@ const menuItems = [
     title: "Artisanal Cheese & Charcuterie",
     description: "Selection of premium cheeses, cured meats, and artisanal accompaniments",
     category: "appetizers",
-    image: "/placeholder-food.svg",
+    image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: [],
     price: "$18"
   },
@@ -37,7 +37,7 @@ const menuItems = [
     title: "Chocolate Lava Cake",
     description: "Warm chocolate cake with molten center, vanilla ice cream and berry compote",
     category: "desserts",
-    image: "/images/chocolate-dessert.svg",
+    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: ["vegetarian"],
     price: "$12"
   },
@@ -46,7 +46,7 @@ const menuItems = [
     title: "Mediterranean Vegetable Stack",
     description: "Grilled zucchini, eggplant, and bell peppers with herbed goat cheese",
     category: "vegetarian",
-    image: "/placeholder-food.svg",
+    image: "https://images.unsplash.com/photo-1576402794548-ca036f57bdbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: ["vegetarian", "gluten-free"],
     price: "$22"
   },
@@ -55,7 +55,7 @@ const menuItems = [
     title: "Beef Tenderloin Wellington",
     description: "Prime beef tenderloin wrapped in puff pastry with mushroom duxelles",
     category: "mains",
-    image: "/images/beef-wellington.svg",
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: [],
     price: "$42"
   },
@@ -64,7 +64,7 @@ const menuItems = [
     title: "Stuffed Mushroom Caps",
     description: "Button mushrooms filled with herb breadcrumbs and parmesan cheese",
     category: "appetizers",
-    image: "/placeholder-food.svg",
+    image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: ["vegetarian"],
     price: "$14"
   },
@@ -73,7 +73,7 @@ const menuItems = [
     title: "Lemon Tart with Meringue",
     description: "Classic French lemon tart with torched meringue and candied lemon zest",
     category: "desserts",
-    image: "/placeholder-food.svg",
+    image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: ["vegetarian"],
     price: "$10"
   },
@@ -82,7 +82,7 @@ const menuItems = [
     title: "Quinoa Power Bowl",
     description: "Superfood quinoa with roasted vegetables, avocado, and tahini dressing",
     category: "vegetarian",
-    image: "/placeholder-food.svg",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     dietary: ["vegetarian", "vegan", "gluten-free"],
     price: "$19"
   }
@@ -157,7 +157,7 @@ export default function MenuGallery() {
           layout
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredItems.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -179,7 +179,7 @@ export default function MenuGallery() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     quality={85}
-                    fallbackSrc="/placeholder-food.svg"
+                    fallbackSrc="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                   />
                   
                   {/* Price Badge */}

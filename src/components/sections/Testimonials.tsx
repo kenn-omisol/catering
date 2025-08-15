@@ -13,7 +13,7 @@ const testimonials = [
     date: "October 2024",
     rating: 5,
     text: "Absolutely phenomenal! The food was beyond our expectations and the presentation was stunning. Our guests are still talking about the incredible flavors and beautiful setup. The team went above and beyond to make our special day perfect.",
-    image: "/images/testimonial-couple.svg",
+    image: "https://images.unsplash.com/photo-1516726817505-f5ed825624d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     eventSize: "150 guests"
   },
   {
@@ -23,7 +23,7 @@ const testimonials = [
     date: "September 2024",
     rating: 5,
     text: "We've used many catering services for our corporate events, but this team stands out. Professional, punctual, and the food quality is consistently excellent. They handled our dietary restrictions with ease and creativity.",
-    image: "/images/professional-woman.svg",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     eventSize: "75 guests"
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     date: "August 2024",
     rating: 5,
     text: "From the initial consultation to the final cleanup, everything was handled with such care and attention to detail. The custom menu they created perfectly reflected my father's favorite flavors. It was truly a celebration to remember.",
-    image: "/images/professional-man.svg",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     eventSize: "40 guests"
   },
   {
@@ -43,7 +43,7 @@ const testimonials = [
     date: "July 2024",
     rating: 5,
     text: "Twenty-five years of marriage deserved something special, and they delivered beyond our wildest dreams. The intimate setting, exquisite cuisine, and flawless service made our anniversary unforgettable. Highly recommend!",
-    image: "/images/testimonial-couple.svg",
+    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     eventSize: "30 guests"
   },
   {
@@ -53,7 +53,7 @@ const testimonials = [
     date: "June 2024",
     rating: 5,
     text: "Outstanding service for our three-day retreat. They adapted to our changing schedule, accommodated various dietary needs, and kept our team well-fed and energized. The breakfast spreads were particularly impressive!",
-    image: "/images/professional-man.svg",
+    image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
     eventSize: "120 guests"
   }
 ]
@@ -206,7 +206,7 @@ export default function Testimonials() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                     quality={85}
-                    fallbackSrc="/placeholder-person.svg"
+                    fallbackSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>

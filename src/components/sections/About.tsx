@@ -100,38 +100,38 @@ export default function About() {
             {/* Large Image */}
             <div className="col-span-2 relative h-64 rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/images/kitchen-modern.svg"
-                alt="Professional kitchen with chefs preparing gourmet dishes"
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+                alt="Professional catering team preparing elegant food presentation for events"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={85}
-                fallbackSrc="/placeholder-kitchen.svg"
+                fallbackSrc="https://images.unsplash.com/photo-1556909909-4ee6c9234e96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
               />
             </div>
             
             {/* Small Images */}
             <div className="relative h-32 rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/images/food-gallery-1.svg"
-                alt="Chef plating an elegant dish"
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Professional catering kitchen with chefs preparing multiple dishes simultaneously"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 25vw"
                 quality={80}
-                fallbackSrc="/placeholder-chef.svg"
+                fallbackSrc="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
               />
             </div>
             
             <div className="relative h-32 rounded-2xl overflow-hidden">
               <OptimizedImage
-                src="/placeholder-event.svg"
-                alt="Elegant event setup with beautiful table arrangements"
+                src="https://images.unsplash.com/photo-1515125321754-301fb92a9518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Elegant wedding reception catering setup with beautifully arranged tables and decorations"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 25vw"
                 quality={80}
-                fallbackSrc="/placeholder-event.svg"
+                fallbackSrc="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
               />
             </div>
           </motion.div>
@@ -223,13 +223,13 @@ export default function About() {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
                   <OptimizedImage
-                    src="/images/chef-portrait.svg"
-                    alt="Executive Chef Portrait"
+                    src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional Executive Chef Michael Anderson in chef whites"
                     width={128}
                     height={128}
                     className="object-cover w-full h-full"
                     quality={85}
-                    fallbackSrc="/placeholder-chef-portrait.svg"
+                    fallbackSrc="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                   />
                 </div>
                 

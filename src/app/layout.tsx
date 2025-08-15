@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://yourusername.github.io/catering' : 'http://localhost:3000'),
   title: "Gourmet Catering Co. | Premium Event Catering Services",
   description: "Award-winning catering services for weddings, corporate events, and special occasions. Custom menus, professional service, and unforgettable culinary experiences. Serving your city since 2008.",
   keywords: "catering, wedding catering, corporate catering, event catering, party catering, gourmet food, private chef, event planning",
