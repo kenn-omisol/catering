@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
+const isGithubPages = process.env.GITHUB_ACTIONS || process.env.GITHUB_PAGES;
+
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
   trailingSlash: true,
+  basePath: isGithubPages ? '/catering' : '',
+  assetPrefix: isGithubPages ? '/catering/' : '',
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
