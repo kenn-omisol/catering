@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #fffef7;
+  --foreground: #1a1a1a;
+  
+  /* Catering Brand Colors - Fresh Organic Theme */
+  --primary-50: #f0f9f0;
+  --primary-100: #dcf2dc;
+  --primary-200: #bce5bc;
+  --primary-300: #8fd18f;
+  --primary-400: #5bb35b;
+  --primary-500: #4A7C59; /* Forest Green - Main brand color */
+  --primary-600: #3d6147;
+  --primary-700: #334e3a;
+  --primary-800: #2a3f2f;
+  --primary-900: #233327;
+  
+  --secondary-50: #fef7ed;
+  --secondary-100: #fdedd6;
+  --secondary-200: #fad7ab;
+  --secondary-300: #f6bb75;
+  --secondary-400: #f1963d;
+  --secondary-500: #F4A460; /* Saffron - Secondary color */
+  --secondary-600: #dc7730;
+  --secondary-700: #b75f28;
+  --secondary-800: #944c26;
+  --secondary-900: #7a4022;
+  
+  --accent-50: #f6f3ef;
+  --accent-100: #e9e2d8;
+  --accent-200: #d4c3b2;
+  --accent-300: #bb9e86;
+  --accent-400: #a17c62;
+  --accent-500: #8B4513; /* Earth Brown - Accent color */
+  --accent-600: #7d3e10;
+  --accent-700: #683310;
+  --accent-800: #552b12;
+  --accent-900: #472613;
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  
+  --color-secondary-50: var(--secondary-50);
+  --color-secondary-100: var(--secondary-100);
+  --color-secondary-200: var(--secondary-200);
+  --color-secondary-300: var(--secondary-300);
+  --color-secondary-400: var(--secondary-400);
+  --color-secondary-500: var(--secondary-500);
+  --color-secondary-600: var(--secondary-600);
+  --color-secondary-700: var(--secondary-700);
+  --color-secondary-800: var(--secondary-800);
+  --color-secondary-900: var(--secondary-900);
+  
+  --color-accent-50: var(--accent-50);
+  --color-accent-100: var(--accent-100);
+  --color-accent-200: var(--accent-200);
+  --color-accent-300: var(--accent-300);
+  --color-accent-400: var(--accent-400);
+  --color-accent-500: var(--accent-500);
+  --color-accent-600: var(--accent-600);
+  --color-accent-700: var(--accent-700);
+  --color-accent-800: var(--accent-800);
+  --color-accent-900: var(--accent-900);
+  
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-info: var(--info);
+  
+  /* Typography */
+  --font-display: Montserrat, Inter, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  
+  /* Font Sizes */
+  --font-size-display-1: clamp(2.5rem, 5vw, 4rem);
+  --font-size-display-2: clamp(2rem, 4vw, 3rem);
+  --font-size-h1: clamp(1.75rem, 3vw, 2.5rem);
+  --font-size-h2: clamp(1.5rem, 2.5vw, 2rem);
+  --font-size-h3: clamp(1.25rem, 2vw, 1.5rem);
+  
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+  --spacing-104: 26rem;
+  --spacing-120: 30rem;
+  
+  /* Border Radius */
+  --radius-4xl: 2rem;
+  
+  /* Animations */
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-scale-in: scaleIn 0.4s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s ease-in-out infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1f1a;
+    --foreground: #ededed;
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Base Styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Enhanced Text Contrast */
+.text-gray-900 {
+  color: #111827 !important;
+}
+
+.text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Better contrast on dark backgrounds */
+.bg-gray-900 .text-white,
+.bg-gradient-to-r .text-white {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Image fixes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Better visibility for text over images */
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Enhanced button contrast */
+.btn-primary,
+.bg-primary-500 {
+  background-color: #3d6147 !important;
+}
+
+.btn-primary:hover,
+.bg-primary-600:hover,
+.hover\:bg-primary-600:hover {
+  background-color: #2f5233 !important;
+}
+
+/* Better text readability */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.text-gray-300 {
+  color: #9ca3af !important;
+}
+
+.text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* Image loading states */
+img {
+  background-color: #f3f4f6;
+  background-image: linear-gradient(45deg, #e5e7eb 25%, transparent 25%), 
+                    linear-gradient(-45deg, #e5e7eb 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, #e5e7eb 75%), 
+                    linear-gradient(-45deg, transparent 75%, #e5e7eb 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Animation utilities */
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Progressive image loading */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 1.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.image-loaded::before {
+  display: none;
+}
+
+/* Custom Utility Classes */
+.text-display-1 {
+  font-size: var(--font-size-display-1);
+  line-height: 1.1;
+  font-weight: 700;
+  font-family: var(--font-display);
+}
+
+.text-display-2 {
+  font-size: var(--font-size-display-2);
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.text-h1 {
+  font-size: var(--font-size-h1);
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.text-h2 {
+  font-size: var(--font-size-h2);
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: var(--font-display);
+}
+
+.text-h3 {
+  font-size: var(--font-size-h3);
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: var(--font-display);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-500);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-700);
+}
